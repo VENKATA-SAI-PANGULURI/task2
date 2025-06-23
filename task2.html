@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Task Manager</title>
+  <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="app-header">
+      <h1>Smart Task Manager</h1>
+      <p>Your productivity booster with a modern look</p>
+    </header>
+
+    <main class="main-grid">
+      <!-- Contact Form -->
+      <section class="card">
+        <h2>📬 Contact Us</h2>
+        <p>Send us a message using the form below</p>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <!-- Todo List -->
+      <section class="card">
+        <h2>✅ To-Do Tasks</h2>
+        <p>Manage your tasks easily and efficiently</p>
+        <div class="todo-input">
+          <input type="text" id="taskInput" placeholder="Add a task..." />
+          <button class="btn success" onclick="addTask()">Add</button>
+        </div>
+        <ul id="todoList" class="todo-list"></ul>
+        <div class="stats">
+          Total Tasks: <span id="totalTasks">0</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="task2.js"></script>
+</body>
+</html>
